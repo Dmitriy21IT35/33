@@ -19,7 +19,10 @@ class Calculator {
                 a = Integer.parseInt (strings[0]);
                 b = Integer.parseInt (strings[1]);
                 op = operator[operator.length - 1];
+                 PrintWriter operation = new PrintWriter ("C:\\rico\\ru.txt");//запись в блокнот файла полученный результат
+                operation.println (operation (a, b, op));
                 System.out.println ("Результат = " + operation (a, b, op));
+                operation.close ();
             } catch (Exception e) {
                 System.out.println ("Ошибка ввода данных");
             }
@@ -27,6 +30,7 @@ class Calculator {
     }
     //КЛАСС С ОПЕРАЦИЯМИ
     private static double operation(double a, double b, String op) {
+        new Scanner (System.in);
         if ("*".equals (op)) {
             return a * b;
         } else if ("+".equals (op)) {
