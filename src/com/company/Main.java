@@ -4,11 +4,13 @@ import java.util.Scanner;
 
 class Calculator {
     public static void main(String[] args) {
+        //ВВод польз в консоль
         System.out.println ("ВВедите выражение");
         Scanner sc = new Scanner (System.in);
+         //ПРИСВАИВАЕМ ПЕРЕМЕННЫЕ
         int a;
         int b;
-        String op;
+        String op;//для ввода значкоа операции  применили в строку
         do {
             String input = sc.next ();
             String[] strings = input.split ("\\W");
@@ -23,6 +25,7 @@ class Calculator {
             }
         } while (true);
     }
+    //КЛАСС С ОПЕРАЦИЯМИ
     private static double operation(double a, double b, String op) {
         if ("*".equals (op)) {
             return a * b;
